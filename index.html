@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap for CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Jokes Website</title>
+    <style>
+        #jokes {
+            background-color: aliceblue;
+            width: 80%;
+            height: 20%;
+            text-align: center;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: larger;
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id='jokes'>Click the button to get the joke.</div>
+    <button type="button" class="btn btn-warning">Next Joke</button>
+
+    <script>
+
+        let jokesArray = [
+            {
+                "category": "Programming",
+                "type": "single",
+                "joke": "Your mama's so FAT she can't save files bigger than 4GB.",
+
+                "id": 9,
+                "safe": false,
+                "lang": "en"
+            },
+            {
+                "category": "Programming",
+                "type": "single",
+                "joke": "How do you tell HTML from HTML5?\n- Try it out in Internet Explorer\n- Did it work?\n- No?\n- It's HTML5.",
+
+                "id": 43,
+                "safe": true,
+                "lang": "en"
+            },
+            {
+                "category": "Programming",
+                "type": "single",
+                "joke": "Today I learned that changing random stuff until your program works is \"hacky\" and a \"bad coding practice\" but if you do it fast enough it's \"Machine Learning\" and pays 4x your current salary.",
+
+                "id": 33,
+                "safe": true,
+                "lang": "en"
+            },
+            {
+                "category": "Programming",
+                "type": "single",
+                "joke": "Documentation is like sex:\nWhen it's good, it's very good.\nWhen it's bad, it's better than nothing...",
+
+                "safe": false,
+                "id": 305,
+                "lang": "en"
+            },
+            {
+                "category": "Programming",
+                "type": "single",
+                "joke": "A programmer puts two glasses on his bedside table before going to sleep.\nA full one, in case he gets thirsty, and an empty one, in case he doesn't.",
+
+                "id": 3,
+                "safe": true,
+                "lang": "en"
+            },
+            {
+                "category": "Programming",
+                "type": "single",
+                "joke": "The six stages of debugging:\n1. That can't happen.\n2. That doesn't happen on my machine.\n3. That shouldn't happen.\n4. Why does that happen?\n5. Oh, I see.\n6. How did that ever work?",
+
+                "id": 123,
+                "safe": true,
+                "lang": "en"
+            },
+            {
+                "category": "Programming",
+                "type": "single",
+                "joke": "Algorithm: A word used by programmers when they don't want to explain how their code works.",
+
+                "id": 51,
+                "safe": true,
+                "lang": "en"
+            },
+            {
+                "category": "Programming",
+                "type": "single",
+                "joke": "UDP is better in the COVID era since it avoids unnecessary handshakes.",
+
+                "id": 259,
+                "safe": true,
+                "lang": "en"
+            },
+            {
+                "category": "Programming",
+                "type": "single",
+                "joke": "Two SQL tables sit at the bar. A query approaches and asks \"Can I join you?\"",
+
+                "id": 221,
+                "safe": true,
+                "lang": "en"
+            },
+            {
+                "category": "Programming",
+                "type": "single",
+                "joke": "Saying that Java is nice because it works on every OS is like saying that anal sex is nice because it works on every gender.",
+
+                "id": 30,
+                "safe": false,
+                "lang": "en"
+            }
+        ]
+
+        let btn = document.querySelector('.btn');
+        let jokes = document.getElementById('jokes');
+        btn.addEventListener('click', () => {
+            if(Math.floor(Math.random() * 11)){
+                let random = Math.floor(Math.random() * 11);
+            jokes.innerHTML = jokesArray[random].joke 
+            } else{
+                alert('No more jokes!')
+                location.reload();
+            }
+            
+        })
+
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
